@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #1565c0, #b92b27);
+  background: linear-gradient(to right, #1565c0, #b92b27);
 }
 
 * {
@@ -10,33 +13,78 @@ body {
 }
 
 .container {
-  border: 2px solid gray;
   text-align: center;
 }
 
+.app-title {
+  color: tomato;
+  opacity: 0.9;
+}
+
+.app-title-light {
+  text-shadow: 1px 2px 12px rgba(255, 99, 71, 0.603);
+  transition: 0.3s;
+}
+
 .box-container {
-  border: 2px solid salmon;
+  border-radius: 15%;
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
+  background: linear-gradient(
+    to right top,
+    rgb(201, 181, 7),
+    rgb(158, 95, 13),
+    rgb(241, 170, 77)
+  );
+  box-shadow: 2px 4px 10px rgb(153, 99, 29);
+  transition: 0.5s ease-out;
+}
+
+.box-container:hover {
+  box-shadow: 2px 4px 20px rgb(173, 110, 27);
 }
 
 .timer-container {
-  border: 2px solid greenyellow;
-  padding: 0px 25px;
+  border: 2px solid rgba(68, 28, 80, 0.027);
+  background-color: rgba(180, 47, 180, 0.158);
+  border-radius: 10%;
 }
 
 .time {
-  border: 2px solid red;
+  background: linear-gradient(to right, #f8d408 25%, #cbcfb5 55%, #d5d6c8 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+  font-size: 30px;
+  padding-top: 15;
 }
-
 .controls-container {
-  border: 2px solid blueviolet;
   display: flex;
   justify-content: space-around;
-  /* margin-top: -10px; */
+  margin-top: -15px;
 }
-
 .control-item {
-  border: 2px solid royalblue;
+  border: 1px solid rgba(236, 215, 215, 0.658);
+  border-top: none;
+  border-right: none;
+  border-radius: 10%;
   padding: 5px;
+  cursor: pointer;
+  background: linear-gradient(to right, #0c7af8, #2683fd44, #6542ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+}
+.control-item:hover {
+  background-color: #0c7af8c5;
+  border-color: #0c7af88f;
+}
+.control-item:active {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+.control-item:not(:last-child) {
+  margin-right: 10px;
 }
